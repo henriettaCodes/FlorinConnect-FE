@@ -1,0 +1,26 @@
+footer {
+    background: linear-gradient(to right, #e086d4, #8f94fb);
+    color: #fff;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .left,
+footer .center,
+footer .right {
+    flex: 1;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: underline;
+}

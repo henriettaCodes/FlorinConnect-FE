@@ -1,0 +1,72 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #ffffff, #8bd987, #ffffff);
+}
+
+nav {
+    background: linear-gradient(to right, #e086d4, #8f94fb);
+    overflow: hidden;
+    color: white;
+    border-radius: 0px 0px 5px 5px;
+    box-shadow: 0 4px 6px rgba(172, 121, 196, 0.9);
+}
+
+nav a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.logo {
+    margin-left: 50px;
+    float: left;
+}
+
+.posts {
+    float: left;
+}
+
+.nav-right {
+    margin-right: 50px;
+    float: right;
+}
+
+.nav-right a {
+    margin-left: 20px;
+}
+
+.btn {
+    font-size: larger;
+    background-color: rgb(1, 168, 113);
+    border-radius: 10px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.9);
+    transition: background-color 0.3s;
+    border-style: ridge;
+    border-color: rgb(0, 0, 0);
+}
+
+.btn:hover {
+    background-color: black;
+}
+
+.navlogo {
+    max-height: 100px;
+}
+
+.content {
+    margin: 100px;
+    min-height: 900px;
+    box-shadow: 0 4px 6px rgba(0.9, 0.9, 0.9, 0.9);
+    background: linear-gradient(to top, #869be0, #ffffff);
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 100px;
+}

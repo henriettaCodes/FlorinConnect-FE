@@ -76,58 +76,28 @@ nav a {
     padding-top: 100px;
 }
 
-.tag {
-    font-weight: bold;
-    font-style: oblique;
-    color: #c077d1;
+form {
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    margin-top: 75px;
 }
 
-.florin-color {
-    color: #90dd71;
-    font-weight: 900;
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
 }
 
-.button-container {
-    display: flex;
-    gap: 150px;
-    margin-top: 100px;
-    font-size: large;
-    font-weight: bold;
-}
-
-.guest {
-    height: 50px;
-    padding: 10px 20px;
-    background-color: #c077d1;
+input[type="submit"] {
+    background-color: #007bff;
     color: white;
-    text-decoration: none;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.9);
-    transition: background-color 0.3s;
-    border-style: ridge;
-    border-color: rgb(0, 0, 0);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    cursor: pointer;
 }
 
-.create {
-    height: 50px;
-    padding: 10px 20px;
-    background-color: #90dd71;
-    color: white;
-    text-decoration: none;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.9);
-    transition: background-color 0.3s;
-    border-style: ridge;
-    border-color: rgb(0, 0, 0);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.guest:hover,
-.create:hover {
-    background-color: #0083fe;
+input[type="submit"]:hover {
+    background-color: #0056b3;
 }

@@ -1,26 +1,26 @@
 footer {
-    background: linear-gradient(to right, #e086d4, #8f94fb);
-    color: #fff;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    display: flex;
-    justify-content: space-between;
+    background: linear-gradient(to right, #e086d4, #8f94fb) !important;
+    color: #fff !important;
+    padding: 10px !important;
+    position: fixed !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    text-align: center !important;
+    display: flex !important;
+    justify-content: space-between !important;
 }
 
 footer .left,
 footer .center,
 footer .right {
-    flex: 1;
+    flex: 1 !important;
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
+    text-decoration: none !important;
+    color: inherit !important;
 }
 
 a:hover {
-    text-decoration: underline;
+    text-decoration: underline !important;
 }

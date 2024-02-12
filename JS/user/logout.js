@@ -2,4 +2,6 @@ const logout = () => {
     localStorage.removeItem("token")
 }
 
-logout()
+document.getElementById("logoutBtn").addEventListener("click", () => {
+    logout()
+})

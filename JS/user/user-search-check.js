@@ -1,16 +1,16 @@
-const adminPageCheck = async () => {
+const userSearchCheck = async () => {
     try {
         let token = localStorage.getItem("token")
         const url = `http://localhost:3000/users/${token}`
         const response = await fetch(url)
         const userData = await response.json()
         console.log("User found:", userData)
+        if (userData.isAdmin === true) {
+            window.location.href = '../admin/admin-search.html'
+        }
         if (!userData.account_id) {
             localStorage.removeItem("token")
             window.location.href = '../public/index.html'
-        }
-        if (!userData.isAdmin === true) {
-            window.location.href = '../user/dashboard.html'
         }
     } catch (error) {
         console.log("No user matching token")
@@ -19,4 +19,4 @@ const adminPageCheck = async () => {
     }
 }
 
-adminPageCheck()
+userSearchCheck()

@@ -11,15 +11,15 @@ document.addEventListener('DOMContentLoaded', async () => {
             card.classList.add('card')
             card.innerHTML = `
                 <h2 style="text-align: center;">${exampleObject.title}</h2>
-                <p style="text-align: left; font-size: 12px; margin-top: 5px;">Posted By: ${exampleObject.author_username}</p>
+                <p style="text-align: left; font-size: 12px; margin: 5px;">${exampleObject.category} posted by: ${exampleObject.author_username}</p>
                 <p style="text-align: right; font-size: 12px; margin-top: -20px;">${formatDateTime(exampleObject.date_posted)}</p>
-                <h3 style="text-align: center; font-size: 16px; margin-top: 10px;">${exampleObject.category}</h3>
+                <br>
                 <p style="text-align: center;">${exampleObject.content}</p>
                 
                 <div style="text-align: center; margin-top: 10px;">
-                    <button class="edit-button" data-postid="${exampleObject.post_id}">Edit</button>
-                    <button class="delete-button" data-postid="${exampleObject.post_id}">Delete</button>
-                    <button class="reply-button" data-postid="${exampleObject.post_id}">Reply</button>
+                    <button class="btn edit-button" data-postid="${exampleObject.post_id}">Edit</button>
+                    <button class="btn delete-button" data-postid="${exampleObject.post_id}">Delete</button>
+                    <button class="btn reply-button" data-postid="${exampleObject.post_id}">Reply</button>
                 </div>
             `
             cardContainer.appendChild(card)

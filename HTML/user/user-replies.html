@@ -4,11 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel='stylesheet' type='text/css' media='screen' href='../../css/common/about.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../../css/user/replies.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='../../css/common/navbar.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='../../css/common/footer.css'>
     <script src="../../JS/user/logout.js" defer></script>
-    <script src="../../JS/user/user-page-check.js" defer></script>
+    <script src="../../JS/user/user-replies-check.js" defer></script>
+    <script src="../../JS/user/user-replies.js" defer></script>
     <title>Document</title>
 </head>
 
@@ -25,7 +26,15 @@
     </nav>
 
     <div class="content">
-        USER REPLIES
+        <br>
+        <a class="btn" href="./user-posts.html">Back to Posts</a>
+        <div id="post"></div>
+        <h3>Replies</h3>
+        <div id="reply"></div>
+        <div class="input-container">
+            <input type="text" id="replyInput" placeholder="Write a reply...">
+            <button class="btn" id="postButton" onclick="postReply()">Post</button>
+        </div>
     </div>
 
     <footer>

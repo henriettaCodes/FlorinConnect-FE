@@ -26,8 +26,16 @@ body {
     width: 900px;
 }
 
+.accordion-collapse {
+    background: linear-gradient(to top, #726cdf, #57d141, #726cdf);
+}
+
 .accordion-item {
     margin-bottom: 10px;
+}
+
+.carousel {
+    box-shadow: 0 4px 6px rgba(0.9, 0.9, 0.9, 0.9);
 }
 
 .carousel-control-prev-icon,

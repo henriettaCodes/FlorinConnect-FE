@@ -47,6 +47,7 @@ nav a {
     transition: background-color 0.3s !important;
     border-style: ridge !important;
     border-color: rgb(0, 0, 0) !important;
+    color: white !important;
 }
 
 .btn:hover {

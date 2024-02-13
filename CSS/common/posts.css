@@ -17,14 +17,15 @@ body {
 }
 
 .card {
-    background: linear-gradient(to top, #cdcc8d, #d83e3e);
+    background: linear-gradient(to top, #cdcc8d, #88a611);
     border: 1px solid #ddd;
-    border-radius: 20px;
+    border-radius: 25px;
     padding: 10px;
-    margin: 10px;
-    width: 600px;
+    margin: 40px;
+    width: 800px;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0.9, 0.9, 0.9, 0.9);
+    font-size: 30px;
 }
 
 .card h2 {

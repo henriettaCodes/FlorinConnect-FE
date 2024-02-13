@@ -10,11 +10,11 @@ document.addEventListener('DOMContentLoaded', async () => {
             const card = document.createElement('div')
             card.classList.add('card')
             card.innerHTML = `
-                <h2 style="text-align: center;">${exampleObject.title}</h2>
-                <p style="text-align: left; font-size: 12px; margin-top: 5px;">Posted By: ${exampleObject.author_username}</p>
-                <p style="text-align: right; font-size: 12px; margin-top: -20px;">${formatDateTime(exampleObject.date_posted)}</p>
-                <h3 style="text-align: center; font-size: 16px; margin-top: 10px;">${exampleObject.category}</h3>
-                <p style="text-align: center;">${exampleObject.content}</p>
+            <h2 style="text-align: center;">${exampleObject.title}</h2>
+            <p style="text-align: left; font-size: 15px; margin: 5px;">${exampleObject.category} posted by: ${exampleObject.author_username}</p>
+            <p style="text-align: right; font-size: 15px; margin-top: -20px;">${formatDateTime(exampleObject.date_posted)}</p>
+            <br>
+            <p style="text-align: center; font-size: 20px;">${exampleObject.content}</p>
             `
             cardContainer.appendChild(card)
         })

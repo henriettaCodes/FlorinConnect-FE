@@ -1,77 +1,125 @@
-document.addEventListener('DOMContentLoaded', function () {
-    let data = [
-        {
-            "post_id": 1,
-            "user_id": 1,
-            "title": "Job Opening at XYZ Corp",
-            "category": "job",
-            "content": "We have a new job opening for software engineers. Apply now!We have a new job opening for software engineers. Apply now!We have a new job opening for software engineers. Apply now!We have a new job opening for software engineers. Apply now!We have a new job opening for software engineers. Apply now!We have a new job opening for software engineers. Apply now!We have a new job opening for software engineers. Apply now! Apply now!We have a new job opening for software engineers. Apply now!We have a new job opening for software engineers. Apply now!We have a new job opening for software engineers. Apply now!We have a new job opening for software engineers. Apply now!We have a new job opening for software engineers. Apply now!We have a new job opening for software engineers. Apply now! Apply now!We have a new job opening for software engineers. Apply now!We have a new job opening for software engineers. Apply now!We have a new job opening for software engineers. Apply now!We have a new job opening for software engineers. Apply now!We have a new job opening for software engineers. Apply now!We have a new job opening for software engineers. Apply now! Apply now!We have a new job opening for software engineers. Apply now!We have a new job opening for software engineers. Apply now!We have a new job opening for software engineers. Apply now!We have a new job opening for software engineers. Apply now!We have a new job opening for software engineers. Apply now!We have a new job opening for software engineers. Apply now! Apply now!We have a new job opening for software engineers. Apply now!We have a new job opening for software engineers. Apply now!We have a new job opening for software engineers. Apply now!We have a new job opening for software engineers. Apply now!We have a new job opening for software engineers. Apply now!We have a new job opening for software engineers. Apply now! Apply now!We have a new job opening for software engineers. Apply now!We have a new job opening for software engineers. Apply now!We have a new job opening for software engineers. Apply now!We have a new job opening for software engineers. Apply now!We have a new job opening for software engineers. Apply now!We have a new job opening for software engineers. Apply now! Apply now!We have a new job opening for software engineers. Apply now!We have a new job opening for software engineers. Apply now!We have a new job opening for software engineers. Apply now!We have a new job opening for software engineers. Apply now!We have a new job opening for software engineers. Apply now!We have a new job opening for software engineers. Apply now! Apply now!We have a new job opening for software engineers. Apply now!We have a new job opening for software engineers. Apply now!We have a new job opening for software engineers. Apply now!We have a new job opening for software engineers. Apply now!We have a new job opening for software engineers. Apply now!We have a new job opening for software engineers. Apply now!",
-            "date_posted": "2024-02-12"
-        },
-        {
-            "post_id": 2,
-            "user_id": 2,
-            "title": "Volunteer Opportunity: Local Community Cleanup",
-            "category": "volunteering",
-            "content": "Join us for a community cleanup event. Let's make our neighborhood clean!",
-            "date_posted": "2024-02-13"
-        },
-        {
-            "post_id": 3,
-            "user_id": 3,
-            "title": "Upcoming Tech Conference",
-            "category": "events",
-            "content": "Exciting tech conference featuring industry experts. Save the date!",
-            "date_posted": "2024-02-14"
-        },
-        {
-            "post_id": 4,
-            "user_id": 1,
-            "title": "Part-time Job Opportunity",
-            "category": "job",
-            "content": "Looking for part-time workers for our retail store. Apply within!",
-            "date_posted": "2024-02-15"
-        },
-        {
-            "post_id": 5,
-            "user_id": 2,
-            "title": "Join Our Environmental Conservation Project",
-            "category": "volunteering",
-            "content": "Help us protect the environment. Join our conservation project today!",
-            "date_posted": "2024-02-16"
-        },
-        {
-            "post_id": 6,
-            "user_id": 3,
-            "title": "Local Music Festival",
-            "category": "events",
-            "content": "Don't miss the upcoming music festival. Get your tickets now!",
-            "date_posted": "2024-02-17"
-        }
-    ]
-
-    let x = 1
-    const carouselInner = document.querySelector('.carousel-inner');
-    data.forEach((item, index) => {
-        const isUserX = item.user_id === x
-        const activeClass = index === 0 ? 'active' : ''
-        const card = document.createElement('div');
-        card.className = `carousel-item ${activeClass}`;
-        card.innerHTML = `
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title text-center">${item.title}</h5>
-                    <p class="card-text text-center" style="padding: 0 100px;">${item.content}</p>
-                    <p class="card-text text-center">${item.date_posted}</p>
-                    ${isUserX ? `<button class="btn btn-primary" style="margin: 0 100px;" onclick="logPostId(${item.post_id})">Log Post ID</button>` : ''}
-                    <button class="btn btn-primary" style="margin: 0 100px;" onclick="logPostId(${item.post_id})">View</button>
+document.addEventListener('DOMContentLoaded', async () => {
+    const carouselInner = document.querySelector('.carousel-inner')
+    try {
+        const response = await fetch('http://localhost:3000/posts/category/event')
+        const data = await response.json()
+        data.forEach((item, index) => {
+            const activeClass = index === 0 ? 'active' : ''
+            const card = document.createElement('div')
+            card.className = `carousel-item ${activeClass}`
+            card.innerHTML = `
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">${item.title}</h5>
+                        <p class="card-text text-center" style="padding: 0 100px;">${item.content}</p>
                     </div>
-            </div>
-        `
-        carouselInner.appendChild(card)
-    })
-    window.logPostId = (post_id) => {
-        console.log(`Post ID: ${post_id}`)
-        localStorage.setItem("post_id", `${post_id}`)
+                    <div class="text-center mb-3">
+                    <button class="btn btn-primary" onclick="savePostId(${item.post_id})">View</button>
+                </div>
+                </div>
+            `
+            carouselInner.appendChild(card)
+            console.log(data)
+        })
+    } catch (error) {
+        console.error('Error fetching data:', error)
+    }
+
+    window.savePostId = (post_id) => {
+        localStorage.setItem("postId", `${post_id}`)
+        window.location.href = './user-replies.html'
+    }
+})
+
+
+document.addEventListener('DOMContentLoaded', async () => {
+    try {
+        const response = await fetch('http://localhost:3000/posts/category/volunteering')
+        const data = await response.json()
+        const carouselInner2 = document.querySelector('#collapseTwo .carousel-inner')
+        const carouselControls2 = document.querySelector('#collapseTwo .carousel')
+        data.forEach((item, index) => {
+            const activeClass = index === 0 ? 'active' : ''
+            const card = document.createElement('div')
+            card.className = `carousel-item ${activeClass}`
+            card.innerHTML = `
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">${item.title}</h5>
+                        <p class="card-text text-center" style="padding: 0 100px;">${item.content}</p>
+                    </div>
+                    <div class="text-center mb-3">
+                        <button class="btn btn-primary" onclick="savePostId(${item.post_id})">View</button>
+                    </div>
+                </div>
+            `
+            carouselInner2.appendChild(card)
+        })
+        new bootstrap.Carousel(carouselControls2)
+    } catch (error) {
+        console.error('Error fetching data:', error)
+    }
+
+    window.savePostId = (post_id) => {
+        localStorage.setItem("postId", `${post_id}`)
+        window.location.href = './user-replies.html'
+    }
+})
+
+
+document.addEventListener('DOMContentLoaded', async () => {
+    try {
+        const response = await fetch('http://localhost:3000/posts/category/job')
+        const data = await response.json()
+
+        const carouselInner3 = document.querySelector('#collapseThree .carousel-inner')
+        const carouselControls3 = document.querySelector('#collapseThree .carousel')
+
+        data.forEach((item, index) => {
+            const activeClass = index === 0 ? 'active' : ''
+            const card = document.createElement('div')
+            card.className = `carousel-item ${activeClass}`
+            card.innerHTML = `
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">${item.title}</h5>
+                        <p class="card-text text-center" style="padding: 0 100px;">${item.content}</p>
+                    </div>
+                    <div class="text-center mb-3">
+                        <button class="btn btn-primary" onclick="savePostId(${item.post_id})">View</button>
+                    </div>
+                </div>
+            `
+            carouselInner3.appendChild(card)
+        })
+        new bootstrap.Carousel(carouselControls3)
+    } catch (error) {
+        console.error('Error fetching data:', error)
+    }
+
+    window.savePostId = (post_id) => {
+        localStorage.setItem("postId", `${post_id}`)
+        window.location.href = './user-replies.html'
+    }
+})
+
+document.addEventListener('DOMContentLoaded', async () => {
+    try {
+        token = localStorage.getItem("token")
+        const url = `http://localhost:3000/users/${token}`
+        const response = await fetch(url)
+        const userData = await response.json()
+        let message
+        let name = userData.username
+        if (userData.isAdmin === true) {
+            message = `Welcome ${name}, you are an Admin and have access to all pages.`
+        } else {
+            message = `Welcome ${name}, you are an Standard User and have edit and delete options for all your posts and replies.`
+        }
+        const messageDiv = document.getElementById('message')
+        messageDiv.textContent = message
+
+    } catch (error) {
+        console.error('Error fetching data:', error)
     }
 })

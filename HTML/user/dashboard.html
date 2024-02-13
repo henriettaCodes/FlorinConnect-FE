@@ -31,7 +31,11 @@
     </nav>
 
     <div class="content">
+        <br>
         <h1>Dashboard</h1>
+        <br>
+        <div id="message"></div>
+        <div>Here is your roundup of posts made on Florin Connect...</div>
         <div class="bootstrap-container">
             <div class="accordion-container">
                 <div class="accordion" id="accordionExample">
@@ -46,15 +50,15 @@
                             data-bs-parent="#accordionExample">
                             <div class="accordion-body">
                                 <h5>Here are some of the recent events that have been posted:</h5>
-                                <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+                                <div id="myCarouselEvents" class="carousel slide" data-bs-ride="carousel">
                                     <div class="carousel-inner"> </div>
-                                    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel"
-                                        data-bs-slide="prev">
+                                    <button class="carousel-control-prev" type="button"
+                                        data-bs-target="#myCarouselEvents" data-bs-slide="prev">
                                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                         <span class="visually-hidden">Previous</span>
                                     </button>
-                                    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel"
-                                        data-bs-slide="next">
+                                    <button class="carousel-control-next" type="button"
+                                        data-bs-target="#myCarouselEvents" data-bs-slide="next">
                                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                         <span class="visually-hidden">Next</span>
                                     </button>
@@ -72,8 +76,20 @@
                         <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                             data-bs-parent="#accordionExample">
                             <div class="accordion-body">
-                                <h5>Here are some of the recent volunteering opportunities that have been posted:
-                                </h5>
+                                <h5>Here are some of the recent volunteering opportunities that have been posted:</h5>
+                                <div id="myCarouselVolunteering" class="carousel slide" data-bs-ride="carousel">
+                                    <div class="carousel-inner"> </div>
+                                    <button class="carousel-control-prev" type="button"
+                                        data-bs-target="#myCarouselVolunteering" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button"
+                                        data-bs-target="#myCarouselVolunteering" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -88,6 +104,19 @@
                             data-bs-parent="#accordionExample">
                             <div class="accordion-body">
                                 <h5>Here are some of the recent job opportunities that have been posted:</h5>
+                                <div id="myCarouselJobs" class="carousel slide" data-bs-ride="carousel">
+                                    <div class="carousel-inner"> </div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#myCarouselJobs"
+                                        data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#myCarouselJobs"
+                                        data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>

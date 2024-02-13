@@ -5,6 +5,19 @@ document.addEventListener('DOMContentLoaded', async () => {
     const volunteerRadioButton = document.querySelector('input[name="filter"][value="volunteering"]')
     const jobRadioButton = document.querySelector('input[name="filter"][value="job"]')
 
+    const searchButton = document.getElementById('searchButton')
+    const searchInput = document.getElementById('searchInput')
+
+    searchButton.addEventListener('click', () => {
+        const inputValue = searchInput.value.trim()
+        if (inputValue) {
+            localStorage.setItem('search', inputValue)
+            window.location.href = './user-search.html'
+        } else {
+            alert('Please enter a search term.')
+        }
+    })
+
     try {
         let token = localStorage.getItem("token")
         const url = `http://localhost:3000/users/${token}`

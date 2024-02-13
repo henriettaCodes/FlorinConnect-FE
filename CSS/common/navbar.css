@@ -1,4 +1,8 @@
 nav {
+    position: sticky !important;
+    top: 0 !important;
+    width: 100% !important;
+    z-index: 1000;
     background: linear-gradient(to right, #e086d4, #8f94fb) !important;
     overflow: hidden !important;
     color: white !important;

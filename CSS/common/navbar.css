@@ -58,3 +58,22 @@ nav a {
 .navlogo {
     max-height: 100px !important;
 }
+
+.btn2 {
+    font-size: larger !important;
+    background-color: #77b573 !important;
+    border-radius: 10px !important;
+    margin-top: 25px !important;
+    margin-bottom: 25px !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.9) !important;
+    transition: background-color 0.3s !important;
+    border-style: ridge !important;
+    border-color: rgb(0, 0, 0) !important;
+    color: #ffffff !important;
+    font-weight: 800 !important;
+    padding: 10px;
+}
+
+.btn2:hover {
+    background-color: #c077d1 !important;
+}

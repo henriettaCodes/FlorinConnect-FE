@@ -1,44 +1,60 @@
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(to right, #ffffff, #8bd987, #ffffff);
+    font-family: sans-serif !important;
+    background-image: url('https://img.freepik.com/free-vector/white-abstract-wallpaper_23-2148830026.jpg');
+    color: #c077d1;
 }
 
 .content {
     margin: 100px;
     min-height: 900px;
-    box-shadow: 0 4px 6px rgba(0.9, 0.9, 0.9, 0.9);
-    background: linear-gradient(to top, #869be0, #ffffff);
-    background-size: 100% 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-radius: 100px;
 }
 
 .accordion-container {
     width: 900px;
-    margin: 0 auto;
-    margin-top: 50px;
+    margin-top: 100px;
 }
 
 .accordion {
     width: 900px;
+    margin-top: 125px;
+}
+
+
+.accordion-item {
+    margin-bottom: 30px;
+}
+
+.accordion-button {
+    color: #ffffff !important;
+    background-color: #8BD987 !important;
+    font-weight: bolder !important;
 }
 
 .accordion-collapse {
-    background: linear-gradient(to top, #726cdf, #57d141, #726cdf);
-}
-
-.accordion-item {
-    margin-bottom: 10px;
+    background-color: #c077d1 !important;
+    color: #ffffff;
+    font-weight: 500;
 }
 
 .carousel {
-    box-shadow: 0 4px 6px rgba(0.9, 0.9, 0.9, 0.9);
+    color: #c077d1;
+    font-size: larger;
 }
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-    background-color: #000;
+    background-color: #8BD987;
+}
+
+#message {
+    color: #c077d1;
+    font-weight: 700;
+}
+
+.btn-primary {
+    background-color: #8BD987 !important;
 }

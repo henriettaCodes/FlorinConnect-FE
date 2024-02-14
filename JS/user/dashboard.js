@@ -111,9 +111,9 @@ document.addEventListener('DOMContentLoaded', async () => {
         let message
         let name = userData.username
         if (userData.isAdmin === true) {
-            message = `Welcome ${name}, you are an Admin and have access to all pages.`
+            message = `Welcome ${name}, you are an Admin and have access to all pages`
         } else {
-            message = `Welcome ${name}, you are an Standard User and have edit and delete options for all your posts and replies.`
+            message = `Welcome ${name}, you are an Standard User and have edit and delete options for all your posts and replies`
         }
         const messageDiv = document.getElementById('message')
         messageDiv.textContent = message

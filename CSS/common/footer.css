@@ -1,15 +1,13 @@
 footer {
-    background: linear-gradient(to right, #e086d4, #8f94fb) !important;
+    background: #c077d1 !important;
     color: #fff !important;
     position: static !important;
-    bottom: 0 !important;
     width: 100% !important;
     height: 40px !important;
     text-align: center !important;
     display: flex !important;
     justify-content: space-between !important;
-    padding-top: 5px;
-    padding-bottom: 50px;
+
 }
 
 footer .left,

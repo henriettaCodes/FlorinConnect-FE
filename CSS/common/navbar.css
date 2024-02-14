@@ -7,7 +7,7 @@ nav {
     overflow: hidden !important;
     color: white !important;
     border-radius: 0px 0px 5px 5px !important;
-    box-shadow: 0 4px 6px rgba(172, 121, 196, 0.9) !important;
+    box-shadow: 0 4px 6px rgba(254, 252, 255, 0.9) !important;
 }
 
 nav a {
@@ -39,7 +39,7 @@ nav a {
 
 .btn {
     font-size: larger !important;
-    background-color: rgb(1, 168, 113) !important;
+    background-color: #c077d1 !important;
     border-radius: 10px !important;
     margin-top: 25px !important;
     margin-bottom: 25px !important;
@@ -47,7 +47,8 @@ nav a {
     transition: background-color 0.3s !important;
     border-style: ridge !important;
     border-color: rgb(0, 0, 0) !important;
-    color: white !important;
+    color: #ffffff !important;
+    font-weight: 800 !important;
 }
 
 .btn:hover {

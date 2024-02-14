@@ -1,24 +1,20 @@
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(to right, #ffffff, #8bd987, #ffffff);
+    font-family: sans-serif !important;
+    background-image: url('https://img.freepik.com/free-vector/white-abstract-wallpaper_23-2148830026.jpg');
+
 }
 
 .content {
     margin: 100px;
     min-height: 900px;
-    box-shadow: 0 4px 6px rgba(0.9, 0.9, 0.9, 0.9);
-    background: linear-gradient(to top, #869be0, #ffffff);
-    background-size: 100% 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-radius: 100px;
 }
 
 .pglogo {
-    max-width: 900px;
-    max-height: 900px;
+    min-width: 500px;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -32,7 +28,7 @@ body {
 }
 
 .florin-color {
-    color: #90dd71;
+    color: #8BD987;
     font-weight: 900;
 }
 
@@ -47,7 +43,7 @@ body {
 .guest {
     height: 50px;
     padding: 10px 20px;
-    background-color: #c077d1;
+    background-color: #C077D1;
     color: white;
     text-decoration: none;
     border-radius: 10px;
@@ -63,8 +59,7 @@ body {
 .create {
     height: 50px;
     padding: 10px 20px;
-    background-color: #90dd71;
-    color: white;
+    background-color: #8BD987;
     text-decoration: none;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.9);
@@ -78,5 +73,13 @@ body {
 
 .guest:hover,
 .create:hover {
-    background-color: #0083fe;
+    background-color: #000000;
+}
+
+.guest,
+.create {
+    font-size: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: white !important;
 }

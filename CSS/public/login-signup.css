@@ -1,19 +1,15 @@
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(to right, #ffffff, #8bd987, #ffffff);
+    font-family: sans-serif !important;
+    background-image: url('https://img.freepik.com/free-vector/white-abstract-wallpaper_23-2148830026.jpg')
 }
 
 .content {
     margin: 100px;
     min-height: 900px;
-    box-shadow: 0 4px 6px rgba(0.9, 0.9, 0.9, 0.9);
-    background: linear-gradient(to top, #869be0, #ffffff);
-    background-size: 100% 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-radius: 100px;
 }
 
 .pglogo {
@@ -27,8 +23,7 @@ body {
 
 form {
     text-align: center;
-    max-width: 400px;
-    width: 100%;
+    min-width: 100px;
     margin-top: 75px;
 }
 
@@ -56,7 +51,7 @@ input[type="checkbox"] {
 
 
 input[type="submit"] {
-    background-color: #007bff;
+    background-color: #c077d1;
     color: white;
     cursor: pointer;
     border: none;

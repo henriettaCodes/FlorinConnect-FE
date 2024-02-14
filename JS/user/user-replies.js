@@ -90,21 +90,27 @@ document.addEventListener('DOMContentLoaded', async () => {
 })
 
 async function deleteReply(replyId) {
-    try {
-        const response = await fetch(`http://localhost:3000/replies/${replyId}`, {
-            method: 'DELETE',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-        })
+    const confirmation = window.confirm("Are you sure you want to delete this reply?")
 
-        if (response.ok) {
-            location.reload()
-        } else {
-            console.error('Failed to delete reply')
+    if (confirmation) {
+        try {
+            const response = await fetch(`http://localhost:3000/replies/${replyId}`, {
+                method: 'DELETE',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+            })
+
+            if (response.ok) {
+                location.reload()
+            } else {
+                console.error('Failed to delete reply')
+            }
+        } catch (error) {
+            console.error('Error deleting reply:', error)
         }
-    } catch (error) {
-        console.error('Error deleting reply:', error)
+    } else {
+        return
     }
 }
 

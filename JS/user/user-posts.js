@@ -188,11 +188,17 @@ document.addEventListener('DOMContentLoaded', async () => {
                     if (deleteButton) {
                         deleteButton.addEventListener('click', async () => {
                             const postId = deleteButton.getAttribute('data-postid')
-                            try {
-                                await fetch(`http://localhost:3000/posts/${postId}`, { method: 'DELETE' })
-                                location.reload()
-                            } catch (error) {
-                                console.error('Error deleting post:', error)
+                            const confirmation = window.confirm("Are you sure you want to delete this reply?")
+
+                            if (confirmation) {
+                                try {
+                                    await fetch(`http://localhost:3000/posts/${postId}`, { method: 'DELETE' })
+                                    location.reload()
+                                } catch (error) {
+                                    console.error('Error deleting post:', error)
+                                }
+                            } else {
+                                return
                             }
                         })
                     }

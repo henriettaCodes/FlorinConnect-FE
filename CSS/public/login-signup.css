@@ -1,7 +1,8 @@
 body {
     margin: 0;
     font-family: sans-serif !important;
-    background-image: url('https://img.freepik.com/free-vector/white-abstract-wallpaper_23-2148830026.jpg')
+    background-image: url('https://img.freepik.com/free-vector/white-abstract-wallpaper_23-2148830026.jpg');
+    color: #c077d1;
 }
 
 .content {
@@ -13,8 +14,7 @@ body {
 }
 
 .pglogo {
-    max-width: 900px;
-    max-height: 900px;
+    min-width: 500px;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -30,12 +30,11 @@ form {
 label {
     display: inline-block;
     margin-bottom: 10px;
-    color: #333;
     font-weight: 700;
 }
 
 input {
-    width: 100%;
+    min-width: 200px;
     padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #ccc;
@@ -58,8 +57,20 @@ input[type="submit"] {
     padding: 12px;
     border-radius: 5px;
     transition: background-color 0.3s;
+    font-size: 30px;
 }
 
 input[type="submit"]:hover {
-    background-color: #0056b3;
+    background-color: #8BD987;
+}
+
+.type {
+    min-width: 500px;
+    min-height: 50px;
+    font-size: larger;
+}
+
+.message {
+    font-size: 30px;
+    font-style: italic;
 }

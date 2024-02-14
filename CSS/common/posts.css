@@ -1,35 +1,34 @@
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(to right, #ffffff, #8bd987, #ffffff);
+    font-family: sans-serif !important;
+    background-image: url('https://img.freepik.com/free-vector/white-abstract-wallpaper_23-2148830026.jpg');
+    color: #c077d1;
+    accent-color: #c077d1;
 }
 
 .content {
     margin: 100px;
     min-height: 900px;
-    box-shadow: 0 4px 6px rgba(0.9, 0.9, 0.9, 0.9);
-    background: linear-gradient(to top, #869be0, #ffffff);
-    background-size: 100% 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-radius: 100px;
 }
 
 .card {
-    background: linear-gradient(to top, #cdcc8d, #88a611);
-    border: 1px solid #ddd;
+    color: white;
+    background: #c077d1;
     border-radius: 25px;
-    padding: 10px;
+    padding-bottom: 20px;
     margin: 40px;
     width: 800px;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0.9, 0.9, 0.9, 0.9);
     font-size: 30px;
+
 }
 
 .card h2 {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .card p {
@@ -52,6 +51,32 @@ body {
 }
 
 .search-text {
-    height: 30px;
+    height: 50px;
     border-radius: 20px;
+    font-size: large;
+}
+
+#filters {
+    font-size: large;
+    color: #77b573;
+}
+
+#searchButton {
+    background-color: #77b573 !important;
+    padding: 10px;
+}
+
+#searchButton:hover {
+    background-color: #c077d1 !important;
+    padding: 10px;
+}
+
+.top {
+    background: linear-gradient(to right, #c077d1, #77b573, #c077d1);
+    border-radius: 20px 20px 0 0;
+}
+
+.mid {
+    font-style: italic;
+    padding: 0 10px 10px 0;
 }

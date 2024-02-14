@@ -1,3 +1,46 @@
+const postReply = async () => {
+    const contentValue = document.getElementById("replyInput").value
+
+    let token = localStorage.getItem("token")
+    const url = `http://localhost:3000/users/${token}`
+    const response = await fetch(url)
+    const userData = await response.json()
+
+    let id = localStorage.getItem("postId")
+
+    const requestBody = {
+        content: contentValue,
+        account_id: userData.account_id,
+    }
+
+    fetch(`http://localhost:3000/replies/${id}`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(requestBody)
+    })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok')
+            }
+            return response.json()
+        })
+        .then(
+            window.location.reload()
+        )
+        .catch(error => {
+            console.error('Error posting reply:', error)
+        })
+}
+
+const postingButton = document.getElementById("postingButton")
+if (postingButton) {
+    postingButton.removeEventListener("click", postReply)
+    postingButton.addEventListener("click", postReply)
+}
+
+
 document.addEventListener('DOMContentLoaded', async () => {
     try {
         let token = localStorage.getItem("token")

@@ -27,12 +27,6 @@ form {
     margin-top: 75px;
 }
 
-label {
-    display: inline-block;
-    margin-bottom: 10px;
-    font-weight: 700;
-}
-
 input {
     min-width: 200px;
     padding: 10px;
@@ -43,10 +37,13 @@ input {
 }
 
 input[type="checkbox"] {
-    margin-right: 5px;
-    transform: scale(1.5);
+    transform: scale(2.5);
 }
 
+label {
+    font-size: 25px;
+    font-weight: 700;
+}
 
 
 input[type="submit"] {
@@ -73,4 +70,8 @@ input[type="submit"]:hover {
 .message {
     font-size: 30px;
     font-style: italic;
+}
+
+.check {
+    margin-bottom: 40px;
 }

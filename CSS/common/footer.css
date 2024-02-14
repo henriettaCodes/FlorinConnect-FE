@@ -26,3 +26,25 @@ a {
 a:hover {
     text-decoration: underline !important;
 }
+
+.title {
+    color: #e086d4;
+}
+
+.content {
+    opacity: 0;
+    transform: translateY(100%);
+    animation: revealPage 1s ease-out forwards;
+}
+
+@keyframes revealPage {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: sans-serif !important;
-    background-image: url('https://img.freepik.com/free-vector/white-abstract-wallpaper_23-2148830026.jpg');
+    background-image: url('https://cdn.pixabay.com/photo/2012/12/24/08/39/background-72250_1280.jpg');
     color: #c077d1;
     accent-color: #c077d1;
 }
@@ -30,11 +30,9 @@ body {
 }
 
 #search-filter {
-    display: flex;
+    padding-top: 70px;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 10px;
-    gap: 400px;
     font-weight: 700;
 }
 
@@ -46,7 +44,8 @@ body {
 
 #filters {
     font-size: large;
-    color: #77b573;
+    color: #436540;
+    margin-top: 80px;
 }
 
 #searchButton {
@@ -72,4 +71,16 @@ body {
     max-width: 800px;
     max-height: 600px;
     margin: 100px auto auto auto;
+}
+
+.controls {
+    text-align: center;
+    background-image: url('https://www.pngfind.com/pngs/b/58-581919_1274-x-619-5-old-note-paper-png.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 1200px;
+    height: 500px;
+    padding-top: 180px;
+    font-family: cursive;
 }

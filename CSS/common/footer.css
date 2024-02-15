@@ -1,8 +1,7 @@
 footer {
     background: #c077d1 !important;
     color: #fff !important;
-    position: relative !important;
-    bottom: 0 !important;
+    position: sticky !important;
     width: 100% !important;
     height: 40px !important;
     text-align: center !important;

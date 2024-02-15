@@ -1,28 +1,30 @@
 body {
     margin: 0;
-    background: linear-gradient(to right, #ffffff, #8bd987, #ffffff);
+    accent-color: #c077d1;
+    color: #c077d1;
+    background-image: url('https://img.freepik.com/free-vector/white-abstract-wallpaper_23-2148830026.jpg');
 }
 
 .content {
     margin: 100px;
-    min-height: 900px;
-    box-shadow: 0 4px 6px rgba(0.9, 0.9, 0.9, 0.9);
-    background: linear-gradient(to top, #869be0, #ffffff);
-    background-size: 100% 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     border-radius: 100px;
+    background-image: url('https://static.vecteezy.com/system/resources/previews/011/421/103/original/spiral-notepad-mockup-png.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    min-height: 1000px;
 }
 
 form {
-    min-width: 800px;
+    width: 500px;
     margin: 50px auto;
     padding: 20px;
-    background-color: #fff;
+    background-color: transparent;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
-    border-radius: 20px;
+    padding-right: 100px;
 }
 
 label {

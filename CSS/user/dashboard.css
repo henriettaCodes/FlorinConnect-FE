@@ -57,3 +57,7 @@ body {
 .btn-primary {
     background-color: #8BD987 !important;
 }
+
+.s {
+    min-height: 270px;
+}

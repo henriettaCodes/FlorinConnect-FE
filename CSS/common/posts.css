@@ -5,7 +5,7 @@ body {
     background-image: url('https://img.freepik.com/free-vector/white-abstract-wallpaper_23-2148830026.jpg');
 
     color: #c077d1;
-    accent-color: #c077d1;
+    accent-color: #77b573;
 }
 
 .content {
@@ -63,15 +63,19 @@ body {
 }
 
 .top {
-    text-decoration: underline dotted;
+    text-decoration: underline;
 }
 
 .mid {
     font-style: italic;
     padding: 0 10px 10px 0;
+    font-size: 20px;
 }
 
-.bottom {}
+.bottom {
+    font-size: 60px;
+    font-weight: 700;
+}
 
 .cc {
     max-width: 800px;
@@ -86,4 +90,11 @@ body {
     height: 400px;
     padding-top: 50px;
     border-radius: 20px;
+}
+
+.searched {
+    padding-top: 100px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
 }

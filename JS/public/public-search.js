@@ -14,12 +14,14 @@ document.addEventListener('DOMContentLoaded', async () => {
             const card = document.createElement('div')
             card.classList.add('card')
             card.innerHTML = `
-                <h2 style="text-align: center;">${exampleObject.title}</h2>
-                <p style="text-align: left; font-size: 15px; margin: 5px;">${exampleObject.category} posted by: ${exampleObject.author_username}</p>
-                <p style="text-align: right; font-size: 15px; margin-top: -20px;">${formatDateTime(exampleObject.date_posted)}</p>
+            <div class="cc">
+                <h2 class="top">${exampleObject.title}</h2>
+                <p class="mid">${exampleObject.category} posted by: ${exampleObject.author_username}</p>
+                <p class="mid">${formatDateTime(exampleObject.date_posted)}</p>
                 <br>
-                <p style="text-align: center; font-size: 20px;">${exampleObject.content}</p>
-            `
+                <p class="bottom" style="text-align: center; font-size: 20px;">${exampleObject.content}</p>
+            </div>
+                `
             cardContainer.appendChild(card)
         })
     } catch (error) {

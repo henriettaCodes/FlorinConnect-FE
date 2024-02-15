@@ -34,6 +34,12 @@ const postReply = async () => {
         })
 }
 
+const postingButton = document.getElementById("postingButton")
+if (postingButton) {
+    postingButton.removeEventListener("click", postReply)
+    postingButton.addEventListener("click", postReply)
+}
+
 document.addEventListener('DOMContentLoaded', async () => {
     try {
         let token = localStorage.getItem("token")
@@ -51,10 +57,10 @@ document.addEventListener('DOMContentLoaded', async () => {
             <div class="cc">
                 <div class="post-card-header top">${postData.title}</div>
                 <div class="post-card-body">
-                    <h5 class="card-title mid1">${postData.content}</h5>
-                    <p class="card-text mid2">Category: ${postData.category}</p>
-                    <p class="card-text mid3"><small class="text-muted">Posted By: ${postData.author_username}</small></p>
-                    <p class="card-text bottom"><small class="text-muted">Date Posted: ${formatDate(postData.date_posted)}</small></p>
+                    <p class="card-text mid">Category: ${postData.category}</p>
+                    <p class="card-text mid"><small class="text-muted">Posted By: ${postData.author_username}</small></p>
+                    <p class="card-text mid"><small class="text-muted">Date Posted: ${formatDate(postData.date_posted)}</small></p>
+                    <h5 class="card-title bottom">${postData.content}</h5>
                     <a class="btn2" href="./admin-posts.html">Back to Posts</a>
                     </div>
                     </div>
@@ -70,25 +76,27 @@ document.addEventListener('DOMContentLoaded', async () => {
         replyRowContainer.className = 'reply-row-container'
 
         replyData.forEach((reply, index) => {
-            replyDiv.innerHTML += `
+            const deleteButton = `<button class="btn2" onclick="deleteReply(${reply.reply_id})">Delete</button>`
+
+            const replyHTML = `
                 <div class="reply-card mb-3">
-                <div class="cr">
-                    <div class="reply-card-header">${reply.author_username}</div>
-                    <div class="reply-card-body">
-                        <p class="card-text">${reply.content}</p>
-                        <p class="card-text"><small>Date Posted: ${formatDate(reply.date_posted)}</small></p>
-                        <button onclick="deleteReply(${reply.reply_id})">Delete</button>
-                    </div>
+                    <div class="cr">
+                        <div class="t reply-card-header">${reply.author_username}:</div>
+                        <div class="reply-card-body">
+                            <p class="m card-text">${reply.content}</p>
+                            <p class="b card-text"><small>Date Posted: ${formatDate(reply.date_posted)}</small></p>
+                            ${deleteButton}
+                        </div>
                     </div>
                 </div>
             `
 
-            replyRowContainer.innerHTML += replyHTML;
+            replyRowContainer.innerHTML += replyHTML
 
             if ((index + 1) % 2 === 0 || index === replyData.length - 1) {
                 replyDiv.appendChild(replyRowContainer);
-                replyRowContainer = document.createElement('div');
-                replyRowContainer.className = 'reply-row-container';
+                replyRowContainer = document.createElement('div')
+                replyRowContainer.className = 'reply-row-container'
             }
         })
 

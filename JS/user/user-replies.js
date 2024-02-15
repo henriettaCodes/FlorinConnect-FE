@@ -82,10 +82,10 @@ document.addEventListener('DOMContentLoaded', async () => {
             const replyHTML = `
         <div class="reply-card mb-3">
         <div class="cr">
-            <div class="reply-card-header">${reply.author_username}</div>
+            <div class="t reply-card-header">${reply.author_username}:</div>
             <div class="reply-card-body">
-                <p class="card-text">${reply.content}</p>
-                <p class="card-text"><small>Date Posted: ${formatDate(reply.date_posted)}</small></p>
+                <p class="m card-text">${reply.content}</p>
+                <p class="b card-text"><small>Date Posted: ${formatDate(reply.date_posted)}</small></p>
                 ${deleteButton}
             </div>
             </div>

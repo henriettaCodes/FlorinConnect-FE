@@ -16,10 +16,6 @@ body {
     margin-top: 100px;
 }
 
-.bootstrap-container {
-    background-color: transparent !important;
-}
-
 .accordion {
     width: 900px;
     margin-top: 125px;
@@ -31,10 +27,23 @@ body {
     border-color: transparent;
 }
 
+.accordion-button:hover {
+    color: #c077d1 !important;
+}
+
+.accordion-button::after {
+    background-image: initial !important;
+}
+
+.accordion-button:not(.collapsed)::after {
+    background-image: initial !important;
+}
+
 .accordion-button {
     color: #ffffff !important;
     background-color: #8BD987 !important;
     font-weight: bolder !important;
+    text-align: center !important;
 }
 
 .accordion-collapse {
@@ -71,4 +80,10 @@ body {
 
 .card-title {
     font-weight: bolder;
+}
+
+.ch {
+    width: 100%;
+    display: grid !important;
+    place-items: center !important;
 }

@@ -194,7 +194,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     if (deleteButton) {
                         deleteButton.addEventListener('click', async () => {
                             const postId = deleteButton.getAttribute('data-postid')
-                            const confirmation = window.confirm("Are you sure you want to delete this reply?")
+                            const confirmation = window.confirm("Are you sure you want to delete this post?")
 
                             if (confirmation) {
                                 try {

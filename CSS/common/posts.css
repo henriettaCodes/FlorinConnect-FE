@@ -1,6 +1,5 @@
 body {
     margin: 0;
-    background-image: url('https://img.freepik.com/free-vector/white-abstract-wallpaper_23-2148830026.jpg');
     color: #c077d1;
     accent-color: #77b573;
 }
@@ -13,18 +12,22 @@ body {
     align-items: center;
 }
 
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
 .card {
     color: #83528e;
     background-image: url('https://pngimg.com/d/sticky_note_PNG18905.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    height: 900px;
-    width: 900px;
-    padding-bottom: 20px;
+    height: 500px;
+    width: 700px;
     text-align: center;
-    font-size: 30px;
-    padding-top: 200px;
+    padding-top: 80px;
 }
 
 #search-filter {
@@ -45,7 +48,7 @@ body {
 #filters {
     font-size: large;
     color: #fff;
-    margin-top: 80px;
+    margin-top: 30px;
 }
 
 #searchButton {
@@ -60,37 +63,40 @@ body {
 }
 
 .top {
-    text-decoration: underline;
+    font-size: 20px;
+    font-weight: bolder;
 }
 
 .mid {
     font-style: italic;
-    padding: 0 10px 10px 0;
-    font-size: 20px;
+    font-size: 15px;
 }
 
 .bottom {
-    font-size: 60px;
-    font-weight: 700;
+    font-size: 15.5px;
+    font-weight: 600;
 }
 
 .cc {
-    max-width: 800px;
-    max-height: 600px;
-    margin: 100px auto auto auto;
+    width: 500px;
+    height: 450px;
+    margin-left: 100px;
+    display: grid;
+    place-items: center;
 }
 
 .controls {
     text-align: center;
     background-color: #db89ed;
-    width: 700px;
-    height: 400px;
+    width: 500px;
+    height: 300px;
     padding-top: 50px;
     border-radius: 20px;
+    display: block !important;
+    place-items: center !important;
 }
 
 .searched {
-    padding-top: 100px;
     color: white;
     font-size: 40px;
     font-weight: bold;

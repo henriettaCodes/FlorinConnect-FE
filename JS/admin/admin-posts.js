@@ -37,9 +37,9 @@ document.addEventListener('DOMContentLoaded', async () => {
                 <p class="middle">${exampleObject.category} posted by: ${exampleObject.author_username}</p>
                 <p class="middle">${formatDateTime(exampleObject.date_posted)}</p>
                 <br>
-                <p class style="text-align: center; font-size: 20px;">${exampleObject.content}</p>
+                <p class="bottom">${exampleObject.content}</p>
                 
-                <div style="text-align: center; margin-top: 10px;">
+                <div>
                     ${userData.account_id === exampleObject.account_id ? `<button class="btn2 edit-button" data-postid="${exampleObject.post_id}">Edit</button>` : ''}
                     <button class="btn2 delete-button" data-postid="${exampleObject.post_id}">Delete</button>
                     <button class="btn2 reply-button" data-postid="${exampleObject.post_id}">Reply</button>
@@ -107,9 +107,9 @@ document.addEventListener('DOMContentLoaded', async () => {
                 <p class="mid">${exampleObject.category} posted by: ${exampleObject.author_username}</p>
                 <p class="mid">${formatDateTime(exampleObject.date_posted)}</p>
                 <br>
-                <p class="bottom" style="text-align: center; font-size: 20px;">${exampleObject.content}</p>
+                <p class="bottom">${exampleObject.content}</p>
                 
-                <div style="text-align: center; margin-top: 10px;">
+                <div>
                     ${userData.account_id === exampleObject.account_id ? `<button class="btn2 edit-button" data-postid="${exampleObject.post_id}">Edit</button>` : ''}
                     <button class="btn2 delete-button" data-postid="${exampleObject.post_id}">Delete</button>
                     <button class="btn2 reply-button" data-postid="${exampleObject.post_id}">Reply</button>
@@ -173,9 +173,9 @@ document.addEventListener('DOMContentLoaded', async () => {
                         <p class="mid">${exampleObject.category} posted by: ${exampleObject.author_username}</p>
                         <p class="mid">${formatDateTime(exampleObject.date_posted)}</p>
                         <br>
-                        <p class="bottom" style="text-align: center; font-size: 20px;">${exampleObject.content}</p>
+                        <p class="bottom">${exampleObject.content}</p>
                         
-                        <div style="text-align: center; margin-top: 10px;">
+                        <div>
                             ${userData.account_id === exampleObject.account_id ? `<button class="btn2 edit-button" data-postid="${exampleObject.post_id}">Edit</button>` : ''}
                             <button class="btn2 delete-button" data-postid="${exampleObject.post_id}">Delete</button>
                             <button class="btn2 reply-button" data-postid="${exampleObject.post_id}">Reply</button>
@@ -239,9 +239,9 @@ document.addEventListener('DOMContentLoaded', async () => {
                         <p class="mid">${exampleObject.category} posted by: ${exampleObject.author_username}</p>
                         <p class="mid">${formatDateTime(exampleObject.date_posted)}</p>
                         <br>
-                        <p class="bottom" style="text-align: center; font-size: 20px;">${exampleObject.content}</p>
+                        <p class="bottom">${exampleObject.content}</p>
                         
-                        <div style="text-align: center; margin-top: 10px;">
+                        <div>
                             ${userData.account_id === exampleObject.account_id ? `<button class="btn2 edit-button" data-postid="${exampleObject.post_id}">Edit</button>` : ''}
                             <button class="btn2 delete-button" data-postid="${exampleObject.post_id}">Delete</button>
                             <button class="btn2 reply-button" data-postid="${exampleObject.post_id}">Reply</button>
@@ -305,9 +305,9 @@ document.addEventListener('DOMContentLoaded', async () => {
                         <p class="mid">${exampleObject.category} posted by: ${exampleObject.author_username}</p>
                         <p class="mid">${formatDateTime(exampleObject.date_posted)}</p>
                         <br>
-                        <p class="bottom" style="text-align: center; font-size: 20px;">${exampleObject.content}</p>
+                        <p class="bottom">${exampleObject.content}</p>
                         
-                        <div style="text-align: center; margin-top: 10px;">
+                        <div>
                             ${userData.account_id === exampleObject.account_id ? `<button class="btn2 edit-button" data-postid="${exampleObject.post_id}">Edit</button>` : ''}
                             <button class="btn2 delete-button" data-postid="${exampleObject.post_id}">Delete</button>
                             <button class="btn2 reply-button" data-postid="${exampleObject.post_id}">Reply</button>

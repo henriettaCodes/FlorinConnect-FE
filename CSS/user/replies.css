@@ -1,7 +1,6 @@
 body {
     font-style: normal;
     margin: 0;
-    background-image: url('https://img.freepik.com/free-vector/white-abstract-wallpaper_23-2148830026.jpg');
     color: #c077d1;
     accent-color: #c077d1;
 }
@@ -26,6 +25,8 @@ body {
     text-align: center;
     font-size: 30px;
     padding-top: 200px;
+    display: grid;
+    place-items: center;
 }
 
 .top {
@@ -63,6 +64,8 @@ body {
     text-align: center;
     font-size: larger;
     font-weight: 700;
+    display: grid;
+    place-items: center;
 }
 
 .cr {

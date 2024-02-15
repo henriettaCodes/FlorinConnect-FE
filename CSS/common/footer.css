@@ -1,13 +1,14 @@
 footer {
     background: #c077d1 !important;
     color: #fff !important;
-    position: static !important;
+    position: relative !important;
+    bottom: 0 !important;
     width: 100% !important;
     height: 40px !important;
     text-align: center !important;
     display: flex !important;
     justify-content: space-between !important;
-
+    padding-top: 10px;
 }
 
 footer .left,

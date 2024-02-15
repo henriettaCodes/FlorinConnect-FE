@@ -94,6 +94,18 @@ body {
     border-radius: 20px;
     display: block !important;
     place-items: center !important;
+    margin-bottom: 50px !important;
+}
+
+.controls2 {
+    text-align: center;
+    background-color: #db89ed;
+    width: 500px;
+    height: 200px;
+    border-radius: 20px;
+    display: block !important;
+    place-items: center !important;
+    margin-bottom: 50px !important;
 }
 
 .searched {

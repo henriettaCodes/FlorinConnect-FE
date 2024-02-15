@@ -45,7 +45,7 @@ body {
     text-decoration: none;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.9);
-    transition: background-color 0.3s;
+    transition: background-color 0.5s;
     border-style: ridge;
     border-color: transparent;
     display: flex;
@@ -60,7 +60,7 @@ body {
     text-decoration: none;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.9);
-    transition: background-color 0.3s;
+    transition: background-color 0.5s;
     border-style: ridge;
     border-color: transparent;
     display: flex;
@@ -68,9 +68,16 @@ body {
     align-items: center;
 }
 
-.guest:hover,
+.guest:hover {
+    background-color: white !important;
+    color: #C077D1 !important;
+    text-decoration: none !important;
+}
+
 .create:hover {
-    background-color: #000000;
+    background-color: white !important;
+    color: #8BD987 !important;
+    text-decoration: none !important;
 }
 
 .guest,

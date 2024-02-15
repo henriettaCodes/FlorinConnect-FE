@@ -109,11 +109,11 @@ document.addEventListener('DOMContentLoaded', async () => {
         const response = await fetch(url)
         const userData = await response.json()
         let message
-        let name = userData.username
+        let name = userData.username.toUpperCase()
         if (userData.isAdmin === true) {
-            message = `Welcome ${name}, you are an Admin and have access to all pages`
+            message = `(Admin) Welcome ${name} `
         } else {
-            message = `Welcome ${name}, you are an Standard User and have edit and delete options for all your posts and replies`
+            message = `(User) Welcome ${name} `
         }
         const messageDiv = document.getElementById('message')
         messageDiv.textContent = message

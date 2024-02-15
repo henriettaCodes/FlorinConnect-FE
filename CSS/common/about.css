@@ -1,14 +1,12 @@
 body {
+    background-image: url('https://img.freepik.com/free-vector/white-abstract-wallpaper_23-2148830026.jpg');
+    color: #c077d1;
     margin: 0;
-    background: linear-gradient(to right, #ffffff, #8bd987, #ffffff);
 }
 
 .content {
     margin: 100px;
     min-height: 900px;
-    box-shadow: 0 4px 6px rgba(0.9, 0.9, 0.9, 0.9);
-    background: linear-gradient(to top, #869be0, #ffffff);
-    background-size: 100% 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -20,19 +18,11 @@ body {
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
-    color: #333;
     font-weight: bolder;
-
-    h1 {
-        color: #bb64dd;
-    }
+    font-size: 30px;
 
     h4 {
         color: #28a745;
-    }
-
-    h5 {
-        color: #6c757d;
     }
 
     ul {

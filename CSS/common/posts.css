@@ -1,7 +1,9 @@
 body {
     margin: 0;
     font-family: sans-serif !important;
-    background-image: url('https://cdn.pixabay.com/photo/2012/12/24/08/39/background-72250_1280.jpg');
+
+    background-image: url('https://img.freepik.com/free-vector/white-abstract-wallpaper_23-2148830026.jpg');
+
     color: #c077d1;
     accent-color: #c077d1;
 }
@@ -15,7 +17,7 @@ body {
 }
 
 .card {
-    color: #c077d1;
+    color: #83528e;
     background-image: url('https://pngimg.com/d/sticky_note_PNG18905.png');
     background-repeat: no-repeat;
     background-position: center;
@@ -26,7 +28,6 @@ body {
     text-align: center;
     font-size: 30px;
     padding-top: 200px;
-    font-family: cursive;
 }
 
 #search-filter {
@@ -40,17 +41,20 @@ body {
     height: 50px;
     border-radius: 20px;
     font-size: large;
+    padding-left: 10px;
+    border: solid #db89ed;
 }
 
 #filters {
     font-size: large;
-    color: #436540;
+    color: #fff;
     margin-top: 80px;
 }
 
 #searchButton {
     background-color: #77b573 !important;
     padding: 10px;
+    font-family: "Merienda", cursive !important;
 }
 
 #searchButton:hover {
@@ -58,7 +62,9 @@ body {
     padding: 10px;
 }
 
-.top {}
+.top {
+    text-decoration: underline dotted;
+}
 
 .mid {
     font-style: italic;
@@ -75,12 +81,9 @@ body {
 
 .controls {
     text-align: center;
-    background-image: url('https://www.pngfind.com/pngs/b/58-581919_1274-x-619-5-old-note-paper-png.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    width: 1200px;
-    height: 500px;
-    padding-top: 180px;
-    font-family: cursive;
+    background-color: #db89ed;
+    width: 700px;
+    height: 400px;
+    padding-top: 50px;
+    border-radius: 20px;
 }

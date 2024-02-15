@@ -55,12 +55,15 @@ document.addEventListener('DOMContentLoaded', async () => {
         const postDiv = document.getElementById('post')
         postDiv.innerHTML = `
             <div class="post-card mb-3">
-                <div class="post-card-header">${postData.title}</div>
+            <div class="cc">
+                <div class="post-card-header top">${postData.title}</div>
                 <div class="post-card-body">
-                    <h5 class="card-title">${postData.content}</h5>
-                    <p class="card-text">Category: ${postData.category}</p>
-                    <p class="card-text"><small class="text-muted">Posted By: ${postData.author_username}</small></p>
-                    <p class="card-text"><small class="text-muted">Date Posted: ${formatDate(postData.date_posted)}</small></p>
+                    <h5 class="card-title mid1">${postData.content}</h5>
+                    <p class="card-text mid2">Category: ${postData.category}</p>
+                    <p class="card-text mid3"><small class="text-muted">Posted By: ${postData.author_username}</small></p>
+                    <p class="card-text bottom"><small class="text-muted">Date Posted: ${formatDate(postData.date_posted)}</small></p>
+                    <a class="btn2" href="./user-posts.html">Back to Posts</a>
+                    </div>
                 </div>
             </div>
         `
@@ -68,20 +71,34 @@ document.addEventListener('DOMContentLoaded', async () => {
         const url3 = `http://localhost:3000/replies/post/${id}`
         const response3 = await fetch(url3)
         const replyData = await response3.json()
-        const replyDiv = document.getElementById('reply')
-        replyData.forEach(reply => {
-            const isCurrentUserReply = reply.account_id === userData.account_id
-            const deleteButton = isCurrentUserReply ? `<button onclick="deleteReply(${reply.reply_id})">Delete</button>` : ''
-            replyDiv.innerHTML += `
-                <div class="reply-card mb-3">
-                    <div class="reply-card-header">${reply.author_username}</div>
-                    <div class="reply-card-body">
-                        <p class="card-text">${reply.content}</p>
-                        <p class="card-text"><small>Date Posted: ${formatDate(reply.date_posted)}</small></p>
-                        ${deleteButton}
-                    </div>
-                </div>
-            `
+        const replyDiv = document.getElementById('reply');
+        let replyRowContainer = document.createElement('div');
+        replyRowContainer.className = 'reply-row-container';
+
+        replyData.forEach((reply, index) => {
+            const isCurrentUserReply = reply.account_id === userData.account_id;
+            const deleteButton = isCurrentUserReply ? `<button class="btn2" onclick="deleteReply(${reply.reply_id})">Delete</button>` : '';
+
+            const replyHTML = `
+        <div class="reply-card mb-3">
+        <div class="cr">
+            <div class="reply-card-header">${reply.author_username}</div>
+            <div class="reply-card-body">
+                <p class="card-text">${reply.content}</p>
+                <p class="card-text"><small>Date Posted: ${formatDate(reply.date_posted)}</small></p>
+                ${deleteButton}
+            </div>
+            </div>
+        </div>
+    `
+
+            replyRowContainer.innerHTML += replyHTML
+
+            if ((index + 1) % 2 === 0 || index === replyData.length - 1) {
+                replyDiv.appendChild(replyRowContainer)
+                replyRowContainer = document.createElement('div')
+                replyRowContainer.className = 'reply-row-container'
+            }
         })
 
     } catch (error) {

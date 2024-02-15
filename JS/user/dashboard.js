@@ -8,13 +8,13 @@ document.addEventListener('DOMContentLoaded', async () => {
             const card = document.createElement('div')
             card.className = `carousel-item ${activeClass}`
             card.innerHTML = `
-                <div class="card">
+                <div class="card" style="background-color:#C077D1; color:#ffff; border-style:none">
                     <div class="card-body">
                         <h5 class="card-title text-center">${item.title}</h5>
                         <p class="card-text text-center" style="padding: 0 100px;">${item.content}</p>
                     </div>
                     <div class="text-center mb-3">
-                    <button class="btn btn-primary" onclick="savePostId(${item.post_id})">View</button>
+                    <button class="btn2 btn-primary" onclick="savePostId(${item.post_id})">View</button>
                 </div>
                 </div>
             `
@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                         <p class="card-text text-center" style="padding: 0 100px;">${item.content}</p>
                     </div>
                     <div class="text-center mb-3">
-                        <button class="btn btn-primary" onclick="savePostId(${item.post_id})">View</button>
+                        <button class="btn2 btn-primary" onclick="savePostId(${item.post_id})">View</button>
                     </div>
                 </div>
             `
@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                         <p class="card-text text-center" style="padding: 0 100px;">${item.content}</p>
                     </div>
                     <div class="text-center mb-3">
-                        <button class="btn btn-primary" onclick="savePostId(${item.post_id})">View</button>
+                        <button class="btn2 btn-primary" onclick="savePostId(${item.post_id})">View</button>
                     </div>
                 </div>
             `

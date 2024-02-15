@@ -1,68 +1,93 @@
 body {
+    font-style: normal;
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(to right, #ffffff, #8bd987, #ffffff);
+    background-image: url('https://img.freepik.com/free-vector/white-abstract-wallpaper_23-2148830026.jpg');
+    color: #c077d1;
+    accent-color: #c077d1;
 }
 
 .content {
     margin: 100px;
     min-height: 900px;
-    box-shadow: 0 4px 6px rgba(0.9, 0.9, 0.9, 0.9);
-    background: linear-gradient(to top, #869be0, #ffffff);
-    background-size: 100% 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-radius: 100px;
 }
 
 .post-card {
-    background-color: rgb(113, 168, 62);
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
-    margin: 20px;
+    color: #c077d1;
+    background-image: url('https://pngimg.com/d/sticky_note_PNG18905.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 800px;
+    width: 900px;
+    padding-bottom: 20px;
+    text-align: center;
+    font-size: 25px;
+    border-style: solid;
+    border-color: transparent;
+    margin-bottom: 40px;
 }
 
-.post-card-header {
-    background-color: rgb(113, 168, 62);
-    font-weight: bold;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    width: 500px;
-    padding: 10px;
-}
-
-.post-card-body {
-    padding: 20px;
+.cc {
+    margin-top: 150px;
+    height: 600px;
+    width: 650px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .reply-card {
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: inline-block;
+    width: 500px;
+    height: 500px;
+    margin: 75px;
+    background-image: url('https://pngimg.com/uploads/sticky_note/sticky_note_PNG18926.png');
+    text-align: center;
+    font-size: larger;
+    font-weight: 700;
+}
+
+.cr {
+    height: 340px;
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+}
+
+.reply-row-container {
+    display: flex;
+    justify-content: space-between;
     margin-bottom: 20px;
-}
-
-.reply-card-header {
-    background-color: #007bff;
-    color: white;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    padding: 10px;
-}
-
-.reply-card-body {
-    padding: 15px;
 }
 
 .input-container {
     margin: 20px;
-    gap: 20px;
+    padding: 20px;
+    background-color: #db89ed;
+    background-size: contain;
+    height: 100px;
+    width: 600px;
+    text-align: center;
+    border-radius: 20px;
 }
 
 #replyInput {
-    border: 1px solid #ddd;
+    border: 1px solid #db89ed;
     border-radius: 5px;
-    height: 20px;
-    width: 300px
+    height: 50px;
+    width: 300px;
+    padding-left: 10px;
+    font-weight: 600;
+    color: #000;
+
+}
+
+.bottom {
+    margin-bottom: 80px;
 }

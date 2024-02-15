@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Macondo&family=Merienda:wght@300..900&display=swap');
+
+body {
+    font-family: "Merienda", cursive !important;
+}
+
 nav {
     position: sticky !important;
     top: 0 !important;
@@ -45,8 +51,8 @@ nav a {
     margin-bottom: 25px !important;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.9) !important;
     transition: background-color 0.3s !important;
-    border-style: ridge !important;
-    border-color: rgb(0, 0, 0) !important;
+    border-style: none !important;
+    border-color: transparent !important;
     color: #ffffff !important;
     font-weight: 800 !important;
 }
@@ -67,12 +73,14 @@ nav a {
     margin-bottom: 25px !important;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.9) !important;
     transition: background-color 0.3s !important;
-    border-style: ridge !important;
-    border-color: rgb(0, 0, 0) !important;
+    border-style: none !important;
+    border-color: transparent !important;
     color: #ffffff !important;
     font-weight: 800 !important;
     padding: 10px;
+    font-family: "Merienda", cursive !important;
 }
+
 
 .btn2:hover {
     background-color: #c077d1 !important;

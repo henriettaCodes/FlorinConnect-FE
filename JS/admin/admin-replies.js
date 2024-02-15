@@ -34,12 +34,6 @@ const postReply = async () => {
         })
 }
 
-const postingButton = document.getElementById("postingButton")
-if (postingButton) {
-    postingButton.removeEventListener("click", postReply)
-    postingButton.addEventListener("click", postReply)
-}
-
 document.addEventListener('DOMContentLoaded', async () => {
     try {
         let token = localStorage.getItem("token")
@@ -54,13 +48,16 @@ document.addEventListener('DOMContentLoaded', async () => {
         const postDiv = document.getElementById('post')
         postDiv.innerHTML = `
             <div class="post-card mb-3">
-                <div class="post-card-header">${postData.title}</div>
+            <div class="cc">
+                <div class="post-card-header top">${postData.title}</div>
                 <div class="post-card-body">
-                    <h5 class="card-title">${postData.content}</h5>
-                    <p class="card-text">Category: ${postData.category}</p>
-                    <p class="card-text"><small class="text-muted">Posted By: ${postData.author_username}</small></p>
-                    <p class="card-text"><small class="text-muted">Date Posted: ${formatDate(postData.date_posted)}</small></p>
-                </div>
+                    <h5 class="card-title mid1">${postData.content}</h5>
+                    <p class="card-text mid2">Category: ${postData.category}</p>
+                    <p class="card-text mid3"><small class="text-muted">Posted By: ${postData.author_username}</small></p>
+                    <p class="card-text bottom"><small class="text-muted">Date Posted: ${formatDate(postData.date_posted)}</small></p>
+                    <a class="btn2" href="./admin-posts.html">Back to Posts</a>
+                    </div>
+                    </div>
             </div>
         `
 
@@ -68,23 +65,38 @@ document.addEventListener('DOMContentLoaded', async () => {
         const response3 = await fetch(url3)
         const replyData = await response3.json()
         const replyDiv = document.getElementById('reply')
-        replyData.forEach(reply => {
+
+        let replyRowContainer = document.createElement('div')
+        replyRowContainer.className = 'reply-row-container'
+
+        replyData.forEach((reply, index) => {
             replyDiv.innerHTML += `
                 <div class="reply-card mb-3">
+                <div class="cr">
                     <div class="reply-card-header">${reply.author_username}</div>
                     <div class="reply-card-body">
                         <p class="card-text">${reply.content}</p>
                         <p class="card-text"><small>Date Posted: ${formatDate(reply.date_posted)}</small></p>
                         <button onclick="deleteReply(${reply.reply_id})">Delete</button>
                     </div>
+                    </div>
                 </div>
             `
+
+            replyRowContainer.innerHTML += replyHTML;
+
+            if ((index + 1) % 2 === 0 || index === replyData.length - 1) {
+                replyDiv.appendChild(replyRowContainer);
+                replyRowContainer = document.createElement('div');
+                replyRowContainer.className = 'reply-row-container';
+            }
         })
 
     } catch (error) {
         console.error('Error fetching data:', error)
     }
 })
+
 
 async function deleteReply(replyId) {
     const confirmation = window.confirm("Are you sure you want to delete this reply?")

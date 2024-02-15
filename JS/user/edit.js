@@ -4,9 +4,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     const response2 = await fetch(url2)
     const postData = await response2.json()
 
-    document.getElementById('title').value = postData.title;
-    document.getElementById('description').value = postData.content;
-    document.getElementById('category').value = postData.category;
+    document.getElementById('title').value = postData.title
+    document.getElementById('description').value = postData.content
+    document.getElementById('category').value = postData.category
 
     const postForm = document.getElementById('postForm')
     let isFormSubmitted = false

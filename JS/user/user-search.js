@@ -26,8 +26,8 @@ document.addEventListener('DOMContentLoaded', async () => {
                 <p class="bottom">${exampleObject.content}</p>
                 
                 <div>
-                    ${userData.account_id === exampleObject.account_id ? `<button class="btn edit-button" data-postid="${exampleObject.post_id}">Edit</button>` : ''}
-                    ${userData.account_id === exampleObject.account_id ? `<button class="btn delete-button" data-postid="${exampleObject.post_id}">Delete</button>` : ''}
+                    ${userData.account_id === exampleObject.account_id ? `<button class="btn2 edit-button" data-postid="${exampleObject.post_id}">Edit</button>` : ''}
+                    ${userData.account_id === exampleObject.account_id ? `<button class="btn2 delete-button" data-postid="${exampleObject.post_id}">Delete</button>` : ''}
                     <button class="btn2 reply-button" data-postid="${exampleObject.post_id}">Reply</button>
                 </div>
                 </div>

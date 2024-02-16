@@ -84,6 +84,7 @@ body {
     display: grid;
     place-items: center;
     overflow-y: scroll;
+    padding-top: 20px;
 }
 
 ::-webkit-scrollbar {

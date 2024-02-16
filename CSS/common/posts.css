@@ -63,7 +63,7 @@ body {
 }
 
 .top {
-    font-size: 20px;
+    font-size: 23px;
     font-weight: bolder;
 }
 
@@ -83,6 +83,11 @@ body {
     margin-left: 100px;
     display: grid;
     place-items: center;
+    overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+    display: none;
 }
 
 .controls {

@@ -30,15 +30,16 @@ body {
 }
 
 .top {
-    text-decoration: underline;
     font-size: 30px;
-    font-weight: 900;
+    font-weight: bolder;
+    padding-bottom: 5px;
 }
 
 .mid {
     font-style: italic;
     padding: 0 10px 10px 0;
     font-size: 20px;
+    font-weight: bold;
 }
 
 .bottom {
@@ -48,8 +49,10 @@ body {
 
 .cc {
     max-width: 800px;
-    max-height: 600px;
+    max-height: 700px;
+    min-height: 600px;
     margin: 100px auto auto auto;
+    overflow-y: scroll;
 }
 
 .reply-card {
@@ -73,6 +76,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     margin-top: 80px !important;
+    overflow-y: scroll;
 }
 
 .reply-row-container {
@@ -113,4 +117,8 @@ body {
 
 .t {
     font-size: 25px;
+}
+
+::-webkit-scrollbar {
+    display: none;
 }
